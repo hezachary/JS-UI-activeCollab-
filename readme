@@ -1,0 +1,6 @@
+/*
+Inject into project site via browser by bookmark: javascript:(function(d,%20s,%20id)%20{%20var%20js,%20fjs%20=%20d.getElementsByTagName(s)[0],%20_wwwroot='//www.your_js_url.com/activeCollabAPI/';%20if%20(d.getElementById(id))%20return;%20js%20=%20d.createElement(s);%20js.id%20=%20id;%20js._wwwroot%20=%20_wwwroot;%20js.src%20=%20_wwwroot%20+%20"js/project.js?time="%20+%20new%20Date().getTime();%20fjs.parentNode.insertBefore(js,%20fjs);%20}(document,%20'script',%20'activeCollabAPI'));void(0); 
+Inject into project site via html:
+<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], _wwwroot='//www.your_js_url.com/activeCollabAPI/'; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js._wwwroot = _wwwroot; js.src = _wwwroot + "js/project.js?time=" + new Date().getTime(); fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'activeCollabAPI'));</script>
+Please defined [wwwroot] to your js landing url, such as: //www.your_js_url.com/activeCollabAPI/
+*/
